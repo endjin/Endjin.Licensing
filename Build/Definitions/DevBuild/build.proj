@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Artefact Include="$(BuildPath)\..\Artefacts\Open-Source-License.txt">
+    <Artefact Include="$(BuildPath)\..\Artefacts\License.txt">
       <Destination>$(OutDir)\</Destination>
     </Artefact>
     <Artefact Include="$(BuildPath)\..\Artefacts\Install.ps1">
