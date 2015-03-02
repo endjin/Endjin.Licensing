@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Target Name="CopyArtefacts" Condition=" '@(Artefact)'!='' ">
+
+    <Message Text="$(NewLineChar)***********$(NewLineChar)* Copying Artefacts :$(NewLineChar)%(Artefact.FullPath)$(NewLineChar)***********"
+             Importance="high" />
+
+    <Copy SourceFiles="%(Artefact.FullPath)"
+          DestinationFolder="%(Artefact.Destination)" />
+    
+  </Target>
+  
+</Project>

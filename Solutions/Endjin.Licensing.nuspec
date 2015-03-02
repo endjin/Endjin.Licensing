@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+    <id>Endjin.Licensing</id>
+    <version>1.0.0.0</version>
+    <description>This package contains the license validation and extensiblity points</description>
+    <title>Endjin's Software Licensing Framework.</title>
+    <authors>Endjin</authors>
+    <owners>Endjin</owners>
+    <copyright>Endjin 2015</copyright>
+    <language>en-GB</language>
+    <iconUrl>https://raw.github.com/endjin/Endjin.Licensing/master/Artefacts/Licensing-32px.png</iconUrl>
+    <projectUrl>https://github.com/endjin/Endjin.Licensing</projectUrl>
+    <licenseUrl>https://dl.dropboxusercontent.com/u/5892928/Endjin/Software-License/Open-Source-Software-License.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+  </metadata>
+  <files>
+    <file src="License.txt" target="License.txt" />
+    <file src="Endjin.Licensing.dll" target="lib\net45\" />
+    <file src="Install.ps1" target="tools" />
+  </files>
+</package>

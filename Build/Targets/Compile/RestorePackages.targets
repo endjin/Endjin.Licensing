@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Target Name="RestorePackages">
+
+    <MSBuild Projects="$(BuildPath)\Targets\Compile\RestorePackage.proj"
+             Properties="SolutionToRestore=%(SolutionsToBuild.Identity);NuGetExePath=$(NuGetExePath)"
+             Targets="RestorePackage" />
+    
+  </Target>
+  
+</Project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="CleanSolutions.targets" />
+  <Import Project="GetNuGet.targets" />
+  <Import Project="RestorePackages.targets" />
+  <Import Project="CompileSolutions.targets" />
+  <Import Project="CopyArtefacts.targets" />
+
+  <PropertyGroup>
+    <CompileDependsOn>
+      CleanSolutions;
+      GetNuGet;
+      RestorePackages;
+      CompileSolutions;
+      CopyArtefacts;
+    </CompileDependsOn>
+  </PropertyGroup>
+  
+  <Target Name="Compile"
+          DependsOnTargets="$(CompileDependsOn)" />
+  
+</Project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <BuildPath>$(MsBuildProjectDirectory)\..\..</BuildPath>
+  </PropertyGroup>
+
+  <Import Project="$(BuildPath)\Targets\Build.targets" />
+
+  <PropertyGroup>
+    <SolutionsRoot>$(BuildPath)\..\Solutions</SolutionsRoot>
+    <VersionNumber>1.0.0.0</VersionNumber>
+ </PropertyGroup>
+  
+  <!-- Define all the Visual Studio solutions to be compiled -->
+  <ItemGroup>
+    <SolutionsToBuild Include="$(SolutionsRoot)\Endjin.Licensing.sln">
+      <Configuration>Release</Configuration>
+      <Platform>Any CPU</Platform>
+      <OutputDir>$(OutDir)\</OutputDir>
+    </SolutionsToBuild>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Artefact Include="$(BuildPath)\..\Artefacts\Open-Source-License.txt">
+      <Destination>$(OutDir)\</Destination>
+    </Artefact>
+    <Artefact Include="$(BuildPath)\..\Artefacts\Install.ps1">
+      <Destination>$(OutDir)\</Destination>
+    </Artefact>
+  </ItemGroup>
+
+</Project>

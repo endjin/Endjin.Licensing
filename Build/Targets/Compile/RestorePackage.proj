@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="..\Common\Common.properties" />
+  
+  <Target Name="RestorePackage">
+
+    <Message Text="$(NewLineChar)***********$(NewLineChar)* Restore Package for Solution :$(NewLineChar)$(SolutionToRestore), '$(NewLineChar)')$(NewLineChar)***********"
+             Importance="high" />
+
+    <Exec Command="&quot;$(NuGetExePath)&quot; restore &quot;$(SolutionToRestore)&quot;" />
+    
+  </Target>
+  
+</Project>
