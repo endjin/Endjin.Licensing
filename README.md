@@ -1,14 +1,14 @@
 Endjin.Licensing
 ================
 
-The framework is inspired by [Rhino.Licensing](http://www.hibernatingrhinos.com/oss/rhino-licensing), an excellent & elegant framework based on creating a [cryptographic signature for an XML document](http://en.wikipedia.org/wiki/XML_Signature) which allows you to check to see if the message has been tampered with. The framework is layered on top of this principal, but allows you to easily specify your own license validation rules. 
+The framework is inspired by [Rhino.Licensing](http://www.hibernatingrhinos.com/oss/rhino-licensing), an excellent & elegant framework based on creating a [cryptographic signature for an XML document](http://en.wikipedia.org/wiki/XML_Signature) which allows you to check to see if the message has been tampered with. The framework is layered on top of this principal, but allows you easily to specify your own license validation rules. 
 
 License generation and license validation have been seperated into different packages. 
 
 - Endjin.Licensing contains validation & extensibility points
 - Endjin.Licensing.Infrastructure contains license generation and extensibility for storing and retrieving license data
 
-The solution contains a example that has both server and client applications, which demonstrate the separation of concerns and how you can implement custom license validation rules. A Specflow based executable specification project also exists and is a good starting point for getting to know the features & behaviour of the framework.
+The solution contains an example that has both server and client applications, which demonstrate the separation of concerns and how you can implement custom license validation rules. A Specflow based executable specification project also exists and is a good starting point for getting to know the features & behaviour of the framework.
 
 The framework is available via NuGet:
 
