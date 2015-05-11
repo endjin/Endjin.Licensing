@@ -10,7 +10,7 @@ License generation and license validation have been seperated into different pac
 
 The solution contains an example that has both server and client applications, which demonstrate the separation of concerns and how you can implement custom license validation rules. A Specflow based executable specification project also exists and is a good starting point for getting to know the features & behaviour of the framework.
 
-The framework is available via NuGet:
+The framework is available for both .NET 4.0 & .NET 4.5 via NuGet:
 
 ```
 Install-Package Endjin.Licensing
