@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Endjin.Licensing.Specs.LicenseValidation
+namespace Endjin.Licensing.Specs.Endjin_Licensing_Specs.LicenseValidation
 {
     using TechTalk.SpecFlow;
     

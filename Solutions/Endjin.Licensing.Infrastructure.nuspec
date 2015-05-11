@@ -14,12 +14,13 @@
     <licenseUrl>https://dl.dropboxusercontent.com/u/5892928/Endjin/Software-License/Open-Source-Software-License.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <dependencies>
-      <dependency id="Endjin.Licensing" version="1.0.0.0" />
+        <dependency id="Endjin.Licensing" version="1.0.0.0" />
     </dependencies>
   </metadata>
   <files>
     <file src="License.txt" target="License.txt" />
     <file src="Endjin.Licensing.Infrastructure.dll" target="lib\net45\" />
+    <file src="Endjin.Licensing.Infrastructure.Net4.dll" target="lib\net40\" />
     <file src="Install.ps1" target="tools" />
   </files>
 </package>
