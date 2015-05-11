@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F995B3C6-A43C-4399-8295-41BDDEAAAB2B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Endjin.Licensing.Specs</RootNamespace>
+    <AssemblyName>Endjin.Licensing.Specs.Net4</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EndjinCoreCompositionNET40">
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.42\lib\net40-full\EndjinCoreCompositionNET40.dll</HintPath>
+    </Reference>
+    <Reference Include="EndjinCoreContainerNET40">
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.42\lib\net40-full\EndjinCoreContainerNET40.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\Packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Should">
+      <HintPath>..\..\Packages\Should.1.1.20\lib\Should.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\..\Packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Endjin.Licensing.Specs\Extensions\ClientLicenseExtensions.cs">
+      <Link>Extensions\ClientLicenseExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Specs\LicenseValidation\PrivateKeys.feature.cs">
+      <Link>LicenseValidation\PrivateKeys.feature.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrivateKeys.feature</DependentUpon>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Specs\LicenseValidation\PrivateKeysSteps.cs">
+      <Link>LicenseValidation\PrivateKeysSteps.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Specs\LicenseValidation\ServerLicenseGenerator.feature.cs">
+      <Link>LicenseValidation\ServerLicenseGenerator.feature.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServerLicenseGenerator.feature</DependentUpon>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Specs\LicenseValidation\ServerLicenseGeneratorSteps.cs">
+      <Link>LicenseValidation\ServerLicenseGeneratorSteps.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Specs\LicenseValidation\ValidateLicense.feature.cs">
+      <Link>LicenseValidation\ValidateLicense.feature.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidateLicense.feature</DependentUpon>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Specs\LicenseValidation\ValidateLicenseSteps.cs">
+      <Link>LicenseValidation\ValidateLicenseSteps.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Specs\Shared\ContextKey.cs">
+      <Link>Shared\ContextKey.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Endjin.Licensing.Specs\LicenseValidation\PrivateKeys.feature">
+      <Link>LicenseValidation\PrivateKeys.feature</Link>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PrivateKeys.feature.cs</LastGenOutput>
+    </None>
+    <None Include="..\Endjin.Licensing.Specs\LicenseValidation\ServerLicenseGenerator.feature">
+      <Link>LicenseValidation\ServerLicenseGenerator.feature</Link>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ServerLicenseGenerator.feature.cs</LastGenOutput>
+    </None>
+    <None Include="..\Endjin.Licensing.Specs\LicenseValidation\ValidateLicense.feature">
+      <Link>LicenseValidation\ValidateLicense.feature</Link>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ValidateLicense.feature.cs</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Endjin.Licensing.Infrastructure.Net4\Endjin.Licensing.Infrastructure.Net4.csproj">
+      <Project>{f8cd21aa-144a-4b68-a22e-61047c88fcce}</Project>
+      <Name>Endjin.Licensing.Infrastructure.Net4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Endjin.Licensing.Net4\Endjin.Licensing.Net4.csproj">
+      <Project>{2339e427-78a2-457d-9737-a655318d32eb}</Project>
+      <Name>Endjin.Licensing.Net4</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8CD21AA-144A-4B68-A22E-61047C88FCCE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Endjin.Licensing.Infrastructure</RootNamespace>
+    <AssemblyName>Endjin.Licensing.Infrastructure.Net4</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Endjin.Licensing.Infrastructure\Contracts\Crypto\IPrivateCryptoKey.cs">
+      <Link>Contracts\Crypto\IPrivateCryptoKey.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Infrastructure\Contracts\Crypto\IPrivateKeyProvider.cs">
+      <Link>Contracts\Crypto\IPrivateKeyProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Infrastructure\Contracts\Domain\IServerLicense.cs">
+      <Link>Contracts\Domain\IServerLicense.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Infrastructure\Contracts\Generators\IServerLicenseGenerator.cs">
+      <Link>Contracts\Generators\IServerLicenseGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Infrastructure\Contracts\Storage\ILicenseRepository.cs">
+      <Link>Contracts\Storage\ILicenseRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Infrastructure\Crypto\PrivateCryptoKey.cs">
+      <Link>Crypto\PrivateCryptoKey.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Infrastructure\Crypto\RsaPrivateKeyProvider.cs">
+      <Link>Crypto\RsaPrivateKeyProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Infrastructure\Domain\ServerLicense.cs">
+      <Link>Domain\ServerLicense.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Infrastructure\Domain\ServerLicenseDocument.cs">
+      <Link>Domain\ServerLicenseDocument.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Infrastructure\Generators\LicenseSignatureGenerator.cs">
+      <Link>Generators\LicenseSignatureGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing.Infrastructure\Generators\ServerLicenseGenerator.cs">
+      <Link>Generators\ServerLicenseGenerator.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Endjin.Licensing.Net4\Endjin.Licensing.Net4.csproj">
+      <Project>{2339e427-78a2-457d-9737-a655318d32eb}</Project>
+      <Name>Endjin.Licensing.Net4</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

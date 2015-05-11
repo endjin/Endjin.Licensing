@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2339E427-78A2-457D-9737-A655318D32EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Endjin.Licensing</RootNamespace>
+    <AssemblyName>Endjin.Licensing.Net4</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Endjin.Licensing\Contracts\Crypto\ICryptoKey.cs">
+      <Link>Contracts\Crypto\ICryptoKey.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Contracts\Crypto\IPublicKeyProvider.cs">
+      <Link>Contracts\Crypto\IPublicKeyProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Contracts\Domain\IClientLicense.cs">
+      <Link>Contracts\Domain\IClientLicense.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Contracts\Domain\ILicense.cs">
+      <Link>Contracts\Domain\ILicense.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Contracts\Parsers\ILicenseCriteriaParser.cs">
+      <Link>Contracts\Parsers\ILicenseCriteriaParser.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Contracts\Validation\ILicenseValidationRule.cs">
+      <Link>Contracts\Validation\ILicenseValidationRule.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Contracts\Validation\ILicenseValidator.cs">
+      <Link>Contracts\Validation\ILicenseValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Crypto\RSAPublicKeyProvider.cs">
+      <Link>Crypto\RSAPublicKeyProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Domain\ClientLicense.cs">
+      <Link>Domain\ClientLicense.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Domain\License.cs">
+      <Link>Domain\License.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Domain\LicenseCriteria.cs">
+      <Link>Domain\LicenseCriteria.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Domain\LicenseElements.cs">
+      <Link>Domain\LicenseElements.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Domain\PublicCryptoKey.cs">
+      <Link>Domain\PublicCryptoKey.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Exceptions\InvalidLicenseException.cs">
+      <Link>Exceptions\InvalidLicenseException.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Exceptions\LicenseExpiredException.cs">
+      <Link>Exceptions\LicenseExpiredException.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Exceptions\LicenseViolationException.cs">
+      <Link>Exceptions\LicenseViolationException.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Extensions\DateTimeExtensions.cs">
+      <Link>Extensions\DateTimeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Extensions\TraversalExtensions.cs">
+      <Link>Extensions\TraversalExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Parsers\LicenseCriteriaParser.cs">
+      <Link>Parsers\LicenseCriteriaParser.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Validation\LicenseSignatureValidator.cs">
+      <Link>Validation\LicenseSignatureValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Validation\LicenseValidator.cs">
+      <Link>Validation\LicenseValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Endjin.Licensing\Validation\Rules\LicenseHasNotExpiredRule.cs">
+      <Link>Validation\Rules\LicenseHasNotExpiredRule.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="..\Endjin.Licensing\ExceptionMessages.resx">
+      <Link>ExceptionMessages.resx</Link>
+      <LastGenOutput>ExceptionMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

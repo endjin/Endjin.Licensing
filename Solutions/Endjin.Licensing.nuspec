@@ -17,6 +17,7 @@
   <files>
     <file src="License.txt" target="License.txt" />
     <file src="Endjin.Licensing.dll" target="lib\net45\" />
+    <file src="Endjin.Licensing.Net4.dll" target="lib\net40\" />
     <file src="Install.ps1" target="tools" />
   </files>
 </package>
