@@ -39,7 +39,7 @@
             var serverLicense = new ServerLicenseGenerator().Generate(privateKey, licenseCriteria);
             var clientLicense = serverLicense.ToClientLicense();
 
-            // In a real implementation, you would embedd the public key into the assembly, via a resource file
+            // In a real implementation, you would embed the public key into the assembly, via a resource file
             File.WriteAllText(publicKeyPath, privateKey.ExtractPublicKey().Contents);
 
             // In a real implementation you would implement ILicenseRepository
