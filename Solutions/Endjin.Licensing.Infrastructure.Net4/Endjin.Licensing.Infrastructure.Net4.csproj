@@ -57,6 +57,9 @@
     <Compile Include="..\Endjin.Licensing.Infrastructure\Crypto\PrivateCryptoKey.cs">
       <Link>Crypto\PrivateCryptoKey.cs</Link>
     </Compile>
+    <Compile Include="..\Endjin.Licensing.Infrastructure\Crypto\RSAPKCS1SHA256SignatureDescription.cs">
+      <Link>Crypto\RSAPKCS1SHA256SignatureDescription.cs</Link>
+    </Compile>
     <Compile Include="..\Endjin.Licensing.Infrastructure\Crypto\RsaPrivateKeyProvider.cs">
       <Link>Crypto\RsaPrivateKeyProvider.cs</Link>
     </Compile>

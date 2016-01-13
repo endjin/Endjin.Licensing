@@ -18,9 +18,12 @@
             {
                 var reference = new Reference { Uri = string.Empty };
                 reference.AddTransform(new XmlDsigEnvelopedSignatureTransform());
+                reference.AddTransform(new XmlDsigExcC14NTransform());
+                reference.DigestMethod = "http://www.w3.org/2001/04/xmlenc#sha256";
 
                 var signedXml = new SignedXml(licenseDocument) { SigningKey = privateKeyProvider.Recreate(privateKey) };
 
+                signedXml.SignedInfo.SignatureMethod = "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256";
                 signedXml.AddReference(reference);
                 signedXml.ComputeSignature();
 

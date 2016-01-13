@@ -30,11 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EndjinCoreCompositionNET40">
-      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.42\lib\net40-full\EndjinCoreCompositionNET40.dll</HintPath>
+    <Reference Include="EndjinCoreCompositionNET40, Version=2.2.0.45, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.45\lib\net40-full\EndjinCoreCompositionNET40.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="EndjinCoreContainerNET40">
-      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.42\lib\net40-full\EndjinCoreContainerNET40.dll</HintPath>
+    <Reference Include="EndjinCoreContainerNET40, Version=2.2.0.45, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.45\lib\net40-full\EndjinCoreContainerNET40.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\Packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>

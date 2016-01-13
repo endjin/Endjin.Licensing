@@ -30,24 +30,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Endjin.SpecFlow">
-      <HintPath>..\..\Packages\Endjin.SpecFlow.1.0.0.6\lib\net45\Endjin.SpecFlow.dll</HintPath>
-    </Reference>
-    <Reference Include="EndjinCoreComposition, Version=2.2.0.42, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+    <Reference Include="Endjin.SpecFlow, Version=1.0.0.36, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.42\lib\Net45\EndjinCoreComposition.dll</HintPath>
+      <HintPath>..\..\Packages\Endjin.SpecFlow.1.0.0.36\lib\net45\Endjin.SpecFlow.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="EndjinCoreCompositionNet45, Version=2.2.0.42, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+    <Reference Include="EndjinCoreComposition, Version=2.2.0.45, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.42\lib\Net45\EndjinCoreCompositionNet45.dll</HintPath>
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.45\lib\Net45\EndjinCoreComposition.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="EndjinCoreContainer, Version=2.2.0.42, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+    <Reference Include="EndjinCoreCompositionNet45, Version=2.2.0.45, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.42\lib\Net45\EndjinCoreContainer.dll</HintPath>
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.45\lib\Net45\EndjinCoreCompositionNet45.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="EndjinCoreContainerNet45, Version=2.2.0.42, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+    <Reference Include="EndjinCoreContainer, Version=2.2.0.45, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.42\lib\Net45\EndjinCoreContainerNet45.dll</HintPath>
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.45\lib\Net45\EndjinCoreContainer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EndjinCoreContainerNet45, Version=2.2.0.45, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.45\lib\Net45\EndjinCoreContainerNet45.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

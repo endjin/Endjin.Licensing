@@ -14,7 +14,9 @@
 
         public IPrivateCryptoKey Create()
         {
-            using (var rsaCryptoServiceProvider = new RSACryptoServiceProvider(4096))
+            CryptoConfig.AddAlgorithm(typeof(RSAPKCS1SHA256SignatureDescription), @"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256");
+
+            using (var rsaCryptoServiceProvider = new RSACryptoServiceProvider { PersistKeyInCsp = false })
             {
                 try
                 {
@@ -36,6 +38,8 @@
 
         public AsymmetricAlgorithm Recreate(IPrivateCryptoKey privateKey)
         {
+            CryptoConfig.AddAlgorithm(typeof(RSAPKCS1SHA256SignatureDescription), @"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256");
+
             this.cryptoServiceProvider = new RSACryptoServiceProvider { PersistKeyInCsp = false };
             this.cryptoServiceProvider.FromXmlString(privateKey.Contents);
 

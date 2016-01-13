@@ -46,6 +46,7 @@
     <Compile Include="Contracts\Crypto\IPrivateCryptoKey.cs" />
     <Compile Include="Contracts\Crypto\IPrivateKeyProvider.cs" />
     <Compile Include="Contracts\Domain\IServerLicense.cs" />
+    <Compile Include="Crypto\RSAPKCS1SHA256SignatureDescription.cs" />
     <Compile Include="Domain\ServerLicenseDocument.cs" />
     <Compile Include="Generators\LicenseSignatureGenerator.cs" />
     <Compile Include="Generators\ServerLicenseGenerator.cs" />
